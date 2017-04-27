@@ -1,0 +1,214 @@
+<html>
+
+<head>
+
+<script src="jquery.min.js"> </script>
+
+<link  rel="stylesheet" href="mate_icon.css" >
+
+<script type="text/javascript"  src="materialize.js"> </script>
+
+<link rel="stylesheet" href="materialize.css">
+
+<link rel="stylesheet" href="animate.css">
+
+<script src="server_connection_ajax.js"> </script>
+
+
+<style type="text/css">
+
+
+::-webkit-scrollbar {
+
+        display: none; 
+    }
+    ::-moz-scrollbar {
+
+        display: none; 
+    }
+
+
+#map
+{
+	position: absolute;
+	left: 0%;
+	height:84%;
+	width: 100%;
+	background-color: yellow;
+}
+
+#map2
+{
+	position: absolute;
+	left: 0%;
+	height: 80%;
+	width: 100%;
+	background-color: yellow;
+}
+
+#contain_buttons
+{
+	position: absolute;
+    width: 100%;
+    bottom: 20%;
+    left: 0%;
+	
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+
+	<div class="row">
+		
+		 <nav class="nav-extended">
+				    <div class="nav-wrapper red darken-2">
+
+					      <a href="#!" class="brand-logo"><i class="large material-icons">healing</i>LifeLine </a>
+					      <ul class="left">
+					        <li><a href="#"><i class="large material-icons">menu</i></a></li>
+					      </ul>
+					      <ul class="right">
+
+					      	<li><a href="#"><i class="large material-icons">notifications</i></a></li>
+					        <li><a href="#"><i class="large material-icons">supervisor_account</i></a></li>
+			     	      </ul>
+
+				    </div>
+
+				    <ul class="tabs tabs-transparent">
+
+							<li class="tab center-text"><a class="active waves-effect waves-yellow" href="#test1"><i class="large material-icons">my_location</i></a></li>
+
+					</ul>
+		 </nav>
+
+
+		 <div id="test1">
+
+
+			 <div class="col s12">
+
+			 	<div id="map">
+			 	</div>
+
+			 	<div id="contain_buttons">
+				 	<div class=row>
+
+					 	<div class="col s6 center">
+					 	 	<a class="waves-effect waves-light btn" id="send_location_button_on" onclick="on_a_location_button()">On Location</a>
+					 	</div>
+
+					 	<div class="col s6 center">
+				 		<a class="waves-effect waves-light btn" id="send_location_button_off" onclick="off_a_location_button()">Off Location</a>
+					 	</div>
+							 	
+				 	</div>
+			 	</div>
+
+			
+
+					 	
+			 </div> 	
+
+
+		 
+				
+
+	    </div>	   
+
+	</div>
+
+</body>
+
+<script type="text/javascript">
+
+
+/*{ lat:  18.606946, lng: 73.868927 } // tcs
+
+{ lat:  18.608889, lng: 73.873026 } // atm
+
+{ lat:  18.604548, lng: 73.874256 } // canteen in ait 
+
+{ lat:  18.592868, lng: 73.874057 } // sr industries moshi
+
+{lat:  18.593901, lng: 73.845470 } // cme golf course
+
+{lat:  18.546316, lng: 73.864342 } // bombay sappers
+
+{lat:  18.551953, lng: 73.900330 } // aga khan palace
+
+{lat:  18.529397, lng: 73.856147} // coep
+
+{lat:  18.606150, lng: 73.958433 } // diamond water park
+
+{lat:  18.551953, lng: 73.960618 } // vitthal nagar 
+
+{lat:  18.523878, lng: 73.730571 } // flame university
+
+{lat:  18.649488, lng: 73.761126 } // nigdi 
+
+{lat: 18.612401  , lng: 73.941371 } // dy patil college of eniginnering
+
+{lat: 18.675185 , lng: 73.892276 } // mahatastra college of enginnering
+
+{lat: 18.651539 , lng: 73.762175 } // pccoe
+
+{lat: 19.044761 , lng: 73.909573 } // takewadi
+*/
+
+      var map1;
+      
+      var map2;
+
+      function initMap() {
+
+        map1 = new google.maps.Map(document.getElementById('map'), {
+          center: {lat:  18.606875, lng: 73.875177},
+          zoom: 15
+        });    
+
+        var user_location= {lat:  18.606875, lng: 73.875177};
+    
+      }
+
+
+    function show_this_too_user_you_on_this()
+    {
+    	  console.log(tell_user_you_on_this_location);
+    	  
+      	/*	 var marker = new google.maps.Marker({
+             position:tell_user_you_on_this_location,
+             map: map
+             });
+
+      	    map.setCenter(tell_user_you_on_this_location);
+    */
+    }
+
+    function show_this_too_user_you_off_this()
+    {
+    	     var marker = new google.maps.Marker({
+             position:tell_user_you_off_this_location,
+             map: map
+             });
+
+      		map.setCenter(tell_user_you_off_this_location);
+
+
+    }
+ 
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiOnT1WNK6z5HUU6I2vqIEdswiOjkiRj4&callback=initMap"
+    async defer>
+    </script>
+
+
+
+</html>
